@@ -22,7 +22,16 @@
 - [x] To verify your work, make sure to run an INSERT query to insert a new movie record, and then a SELECT query to list the records.
 
 ## Setup
+This project was made with postgreSQL database software. Here's how to install it:
+```shell
+# Install postgresql (use latest version)
+$ brew install postgresql@15
 
+# Make sure the installation directory is on your PATH environment variable
+# Run this line from the Homebrew output
+echo 'export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"' >> ~/.zshrc
+```
+Here's how to run this project:
 ```shell
 # Clone the repository to your local machine
 ; git clone https://github.com/NatalieJClark/movies-directory-table.git YOUR_PROJECT_NAME
@@ -33,11 +42,8 @@ createdb movies_directory;
 # Create the table by running the SQL table file with psql.
 psql -h 127.0.0.1 movies_directory < movies_table.sql
 
-# Enter psql
-psql
+# Navigate to the student_directory database with psql
+psql -h 127.0.0.1 movies_directory
 
-# Connect to the student_directory database
-\c movies_directory
-
-# View the created table
-SELECT * FROM movies
+# View the created table with psql
+SELECT * FROM movies;
