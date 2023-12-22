@@ -44,13 +44,13 @@ Here's how to run this project:
 ; git clone https://github.com/NatalieJClark/movies-directory-table.git YOUR_PROJECT_NAME
 
 # Create the database
-createdb movies_directory;
+; createdb movies_directory;
 
 # Create the table by running the SQL table file with psql.
-psql -h 127.0.0.1 movies_directory < movies_table.sql
+; psql -h 127.0.0.1 movies_directory < movies_table.sql
 
 # Navigate to the student_directory database with psql
-psql -h 127.0.0.1 movies_directory
+; psql -h 127.0.0.1 movies_directory
 
 # View the created table with psql
-SELECT * FROM movies;
+; SELECT * FROM movies;
